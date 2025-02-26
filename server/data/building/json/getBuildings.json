@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "buildingYear": 2010,
+    "address": {
+      "street": "Musterstraße 1",
+      "zip": "12345",
+      "city": "Stadt"
+    }
+  },
+  {
+    "id": 2,
+    "buildingYear": 1970,
+    "address": {
+      "street": "Hauptstraße 2",
+      "zip": "45983",
+      "city": "Dorf"
+    }
+  }
+]
+

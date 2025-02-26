@@ -1,0 +1,34 @@
+<div>
+  <h2>Gebäude</h2>
+
+  @if (!loaded) {
+    <mat-spinner></mat-spinner>
+  }
+
+  <div class="example-table-container">
+    <table mat-table [dataSource]="buildingList" class="example-table" matSort>
+      <!-- Number Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef matSort>ID</th>
+        <td mat-cell *matCellDef="let building">{{ building.id }}</td>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="buildingYear">
+        <th mat-header-cell *matHeaderCellDef matSort>Baujahr</th>
+        <td mat-cell *matCellDef="let building">{{ building.buildingYear }}</td>
+      </ng-container>
+
+      <!-- State Column -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef matSort>Adresse</th>
+        <td mat-cell *matCellDef="let building">{{ building.address }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+</div>
+
